@@ -4,21 +4,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	//size명의 학생에 대한 시험 성적 저장 
-	int i, average;
-	int sum; 
-	int grade[SIZE];
 	
-	sum = 0;
-	for(i=0;i<SIZE;i++)
-	{
-		printf("학생 성적을 입력하세요 :");
-		scanf("%d", &grade[i]);
-		sum += grade[i];
+	int i;
+	int a[SIZE]={1,2,3,4,5}; 
+	int b[SIZE]={1,2,3,4,5};
+	int flag_same = 1;
+	
+	for(i=0;i<SIZE;i++) {
+	
+		if (a[i] != b[i])
+		{
+			printf("%i-th elemnet is diff\n",i);
+			flag_same = 0;
+		}
 	}
-	
-	average = sum/SIZE;
-	printf("average grade:%d\n",average);
-	
+	printf("Are a and b the same? %i\n", flag_same);
+
 	return 0;
 }
